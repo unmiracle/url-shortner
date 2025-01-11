@@ -1,0 +1,15 @@
+{
+  "name": "Shortner",
+  "packageManager": "yarn@3.6.4",
+  "workspaces": [
+    "src/*"
+  ],
+  "scripts": {
+    "client": "yarn workspace client dev",
+    "server": "yarn workspace server start:dev",
+    "start": "concurrently \"yarn client\" \"yarn server\""
+  },
+  "dependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
