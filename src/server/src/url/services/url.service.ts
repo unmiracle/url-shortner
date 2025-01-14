@@ -66,7 +66,10 @@ export class UrlService {
     const url = await this.findOne(shortUrlOrAlias);
 
     const currentDatetime = new Date();
-    if (currentDatetime > new Date(url.expiresAt)) throw new GoneException();
+
+    if (url.expiresAt && currentDatetime > new Date(url.expiresAt)) {
+      throw new GoneException();
+    }
 
     await this.transitionsService.create({ ip, urlId: url.id });
 

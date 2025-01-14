@@ -1954,6 +1954,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tanstack/query-core@npm:5.64.1":
+  version: 5.64.1
+  resolution: "@tanstack/query-core@npm:5.64.1"
+  checksum: cdead4a1589600c21a6a61d8cec8f54b2e806635d8c573972d4b2e448c66bc5c4b553eba366326d9346fe8e806f67f79e7973534904194b479a98dfa8231a453
+  languageName: node
+  linkType: hard
+
+"@tanstack/react-query@npm:^5.64.1":
+  version: 5.64.1
+  resolution: "@tanstack/react-query@npm:5.64.1"
+  dependencies:
+    "@tanstack/query-core": 5.64.1
+  peerDependencies:
+    react: ^18 || ^19
+  checksum: 4272c7319c2805aadbe201ace10989c717828b1b7ed5d478edd28e28d0d3692afe0f712f5f0c8584c667c0d25fc8395d585d0056d315e57101acb7ab7062c862
+  languageName: node
+  linkType: hard
+
 "@tsconfig/node10@npm:^1.0.7":
   version: 1.0.11
   resolution: "@tsconfig/node10@npm:1.0.11"
@@ -3572,11 +3590,13 @@ __metadata:
   dependencies:
     "@ant-design/icons": ^5.5.2
     "@eslint/js": ^9.17.0
+    "@tanstack/react-query": ^5.64.1
     "@types/react": ^18.3.18
     "@types/react-dom": ^18.3.5
     "@vitejs/plugin-react": ^4.3.4
     antd: ^5.23.0
     axios: ^1.7.9
+    dayjs: ^1.11.13
     eslint: ^9.17.0
     eslint-plugin-react-hooks: ^5.0.0
     eslint-plugin-react-refresh: ^0.4.16
@@ -3873,7 +3893,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dayjs@npm:^1.11.11, dayjs@npm:^1.11.9":
+"dayjs@npm:^1.11.11, dayjs@npm:^1.11.13, dayjs@npm:^1.11.9":
   version: 1.11.13
   resolution: "dayjs@npm:1.11.13"
   checksum: f388db88a6aa93956c1f6121644e783391c7b738b73dbc54485578736565c8931bdfba4bb94e9b1535c6e509c97d5deb918bbe1ae6b34358d994de735055cca9
