@@ -26,18 +26,15 @@ function App() {
 
   const onFinish = async (values: CreateUrlDto) => {
     try {
-      if (values.expiresAt) {
-        // @ts-expect-error test
+      if (values.expiresAt && typeof values.expiresAt !== "string") {
         values.expiresAt = values.expiresAt.toISOString();
       }
 
       await createUrl(
-        // @ts-expect-error test
         { ...values },
         {
           onError,
           onSuccess: (data: URL) => {
-            console.log("data success", data);
             setCreatedUrl({ ...data });
             form.resetFields();
           },

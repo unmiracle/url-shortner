@@ -14,7 +14,6 @@ import { AppController } from './app.controller';
       imports: [ConfigModule],
       inject: [ConfigService],
       useFactory: (configService: ConfigService) => {
-        console.log(configService.get<string>('DB_PASS'));
         return {
           type: 'postgres',
           host: configService.get<string>('DB_HOST'),

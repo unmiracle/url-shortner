@@ -12,7 +12,6 @@ export class TransitionsService {
   ) {}
 
   async create(createTransitionDto: CreateTransitionDto) {
-    // console.log(createTransitionDto);
     await this.repository.save({
       url: { id: createTransitionDto.urlId },
       ip: createTransitionDto.ip,
